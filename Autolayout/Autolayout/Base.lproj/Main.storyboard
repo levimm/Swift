@@ -63,6 +63,9 @@
                                 <rect key="frame" x="363" y="96" width="38" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="2p5-Mw-zsW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>

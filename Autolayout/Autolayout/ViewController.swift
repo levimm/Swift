@@ -20,12 +20,18 @@ class ViewController: UIViewController {
         
     }
     
+    var loggedInUser: User? {didSet { updateUI() } }
     var secure = false { didSet { updateUI() } }
     
     private func updateUI()
     {
         passwordField.secureTextEntry = secure
         passwordLabel.text = secure ? "Secure Password" : "Password"
+    }
+    
+
+    @IBAction func login() {
+        loggedInUser = User.login(loginField.text ?? "", password: passwordField.text ?? "")
     }
     
     @IBAction func toggleSecurity()
